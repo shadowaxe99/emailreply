@@ -1,5 +1,6 @@
 ```python
 import os
+import pickle
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -44,4 +45,6 @@ def integrateEmailPlatform(user_preferences, email_chain):
             print(label['name'])
 
     # TODO: Implement integration with other email platforms
+    
+integrateEmailPlatform(user_preferences, email_chain)
 ```

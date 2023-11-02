@@ -1,4 +1,3 @@
-```python
 import React from 'react';
 import { connect } from 'react-redux';
 import { customizeDraft, provideFeedback } from '../actions';
@@ -63,4 +62,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(IntegrationWidget);
-```

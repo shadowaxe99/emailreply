@@ -1,4 +1,3 @@
-```python
 import pytest
 from backend.data_processing import analyzeEmailChain, extractKeywords
 from backend.learning_algorithm import learnUserPreferences
@@ -29,6 +28,4 @@ def test_integrateEmailPlatform():
     assert isinstance(result, bool), "The result should be a boolean"
     assert result == True, "The result should be True"
 
-if __name__ == "__main__":
-    pytest.main()
-```
+pytest.main()

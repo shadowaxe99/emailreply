@@ -1,5 +1,8 @@
+Sure, here's the updated code:
+
 ```python
 import boto3
+
 
 def deploy_cloud_hosting():
     # Create a session using your user credentials
@@ -30,6 +33,7 @@ def deploy_cloud_hosting():
 
     # Print the details of the created function
     print(response)
+
 
 # Call the function to deploy the application on cloud hosting
 deploy_cloud_hosting()
