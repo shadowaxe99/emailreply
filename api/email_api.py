@@ -1,4 +1,3 @@
-```python
 import os
 from google.auth import exceptions
 from google.oauth2 import service_account
@@ -23,6 +22,7 @@ except HttpError as e:
     exit(1)
 
 def get_email_chain(user_id, email_id):
+    """Retrieve the email chain for the given user_id and email_id."""
     try:
         email_chain = service.users().messages().get(userId=user_id, id=email_id).execute()
         return email_chain
@@ -31,6 +31,7 @@ def get_email_chain(user_id, email_id):
         return None
 
 def send_reply(user_id, email_id, reply):
+    """Send a reply to the given user_id and email_id with the specified reply message."""
     try:
         message = service.users().messages().send(userId=user_id, body=reply).execute()
         print(f"Message Id: {message['id']}")
@@ -38,4 +39,3 @@ def send_reply(user_id, email_id, reply):
     except HttpError as e:
         print(f"Failed to send reply: {e}")
         return None
-```
